@@ -1,4 +1,5 @@
 body {
+    animation: fade-down 0.5s;
     align-items: center;
     background-color: rgb(12, 12, 12);
     color: white;
@@ -10,8 +11,10 @@ body {
     overflow-x: hidden;
 }
 
-.container {
+.heading-container {
     font-family: "Niramit", sans-serif;
+    font-weight: 700;
+    font-style: italic;
     margin-top: 150px;
     margin-bottom: 150px;
 }
@@ -36,6 +39,67 @@ body {
     height: 260px;
     position: relative;
     width: calc(33.333% - 8px);
+}
+
+.card-content {
+    padding: 0.01px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    position: absolute;
+    left: 50px;
+    bottom: 70px;
+    font-family: "Niramit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    align-items: center;
+    color: white;
+    font-size: 1em;
+}
+
+.about-icon {
+    position: absolute;
+    left: 20px;
+    bottom: 85px;
+}
+
+.about-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.specialties-icon {
+    position: absolute;
+    left: 20px;
+    bottom: 82.5px;
+}
+
+.projects-icon {
+    position: absolute;
+    left: 20px;
+    bottom: 82.5px;
+}
+
+.projects-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.specialties-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+p {
+    font-family: "Niramit", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: lightgray;
+    font-size: 0.8em;
+    margin-left: 30px;
+    margin-top: 190px;
 }
 
 @media screen and (max-width: 768px) {
@@ -88,4 +152,30 @@ body {
     position: relative;
     width: calc(100% - 2px);
     z-index: 2;
+}
+
+
+/* KEYFRAMES */
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes fade-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
 }
