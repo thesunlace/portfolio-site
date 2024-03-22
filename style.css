@@ -4,15 +4,15 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0px;
-    overflow: hidden;
     padding: 0px;
+    overflow-x: hidden;
 }
 
 .container {
     font-family: "Niramit", sans-serif;
+    margin-top: 150px;
     margin-bottom: 150px;
 }
 
@@ -21,7 +21,8 @@ body {
     flex-wrap: wrap;
     gap: 8px;
     max-width: 922px;
-    width: calc(100% - 2px);
+    width: 100%;
+    overflow: hidden;
 }
 
 #cards:hover > .card > .card-border {
@@ -34,7 +35,13 @@ body {
     cursor: pointer;
     height: 260px;
     position: relative;
-    width: 300px;
+    width: calc(33.333% - 8px);
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 8px);
+    }
 }
 
 .card:hover::before { 
