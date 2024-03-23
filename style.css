@@ -1,5 +1,4 @@
 body {
-    animation: fade-down 0.5s;
     align-items: center;
     background-color: rgb(12, 12, 12);
     color: white;
@@ -12,6 +11,7 @@ body {
 }
 
 .heading-container {
+    animation: fade-down 0.5s;
     font-family: "Niramit", sans-serif;
     font-weight: 700;
     font-style: italic;
@@ -20,6 +20,7 @@ body {
 }
 
 #cards {
+    animation: fade-down 0.5s 0.5s backwards;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -32,16 +33,39 @@ body {
     opacity: 1;
 }
 
+
 .card {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     cursor: pointer;
-    height: 260px;
+    height: 120px;
     position: relative;
     width: calc(33.333% - 8px);
 }
 
+.card1 .card-content {
+    background: linear-gradient(to top, rgba(39, 66, 255, 0.3), transparent);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+}
+
+/* background: linear-gradient(to top, rgba(99,108,255,0.5), transparent); */
+
+.card2 .card-content {
+    background: linear-gradient(to top, rgba(39, 66, 255, 0.3), transparent);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.card3 .card-content {
+    background: linear-gradient(to top, rgba(39, 66, 255, 0.3), transparent);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .card-content {
+    background-repeat: no-repeat;
     padding: 0.01px;
     display: flex;
     flex-direction: column;
@@ -50,7 +74,7 @@ body {
 h2 {
     position: absolute;
     left: 50px;
-    bottom: 70px;
+    bottom: 50px;
     font-family: "Niramit", sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -62,7 +86,7 @@ h2 {
 .about-icon {
     position: absolute;
     left: 20px;
-    bottom: 85px;
+    bottom: 65px;
 }
 
 .about-icon img {
@@ -73,13 +97,13 @@ h2 {
 .specialties-icon {
     position: absolute;
     left: 20px;
-    bottom: 82.5px;
+    bottom: 64px;
 }
 
 .projects-icon {
     position: absolute;
     left: 20px;
-    bottom: 82.5px;
+    bottom: 63px;
 }
 
 .projects-icon img {
@@ -95,16 +119,18 @@ h2 {
 p {
     font-family: "Niramit", sans-serif;
     font-weight: 400;
+    margin-top: 60px;
     font-style: italic;
     color: lightgray;
     font-size: 0.8em;
     margin-left: 30px;
-    margin-top: 190px;
+
 }
 
 @media screen and (max-width: 768px) {
     .card {
-        width: calc(50% - 8px);
+        width: calc(100% - 16px);
+        margin-bottom: 16;
     }
 }
 
