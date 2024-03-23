@@ -10,6 +10,76 @@ body {
     overflow-x: hidden;
 }
 
+header {
+    animation: fade-down 0.5s 0.5s backwards;
+    background: rgb(18, 18, 18);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 300ms ease-in-out;
+
+    .logo {
+        color: white;
+        font-family: "Niramit", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+    }
+
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner {
+    width: 60%;
+    margin: 0 auto;
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+
+        a {
+            color: white;
+            font-family: "Niramit", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            padding: 1em 1.5em;
+
+            &:hover {
+                background: linear-gradient(to top, rgba(39, 66, 255, 0.3), transparent);
+            }
+        }
+
+        .active {
+
+
+            &:before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(to top, rgba(39, 66, 255, 0.3), transparent);
+                height: .3em;
+            }
+        }
+    }
+}
+
+.scroll-down header {
+    transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up header {
+    filter: drop-shadow(0 -10px 20px rgb(50, 50, 50));
+
+}
+
 .heading-container {
     animation: fade-down 0.5s;
     font-family: "Niramit", sans-serif;
